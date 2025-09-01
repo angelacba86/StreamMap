@@ -48,6 +48,7 @@ const resultDetailCtrl = async (req, res) => {
 
 const resultProvidersCtrl = async (req, res) => {
   const { type, id } = req.params;
+  const { provider } = req.query; 
   if (!type && !id) {
     return res
       .status(400)
