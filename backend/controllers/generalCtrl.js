@@ -7,7 +7,6 @@ const popularContentCtrl = async (req, res) => {
   const { type } = req.params;
   try {
     const response = await popularContentHandler(type);
-    const vacia=0;
     res.json(response.data);
   } catch (error) {
     res
