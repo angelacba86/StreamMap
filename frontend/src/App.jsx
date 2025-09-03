@@ -1,11 +1,14 @@
-import { Header, Banner, StepsCards } from "./components/index";
+import { Header, Footer } from "./components/index";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Header />
-      <Banner />
-      <StepsCards />
+      <main className="container">
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 }
