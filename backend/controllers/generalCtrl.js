@@ -1,41 +1,21 @@
-const {
-  popularMovieHandler,
-  popularSeriesHandler,
-  popularContentHandler
-} = require("../handlers/generalHandler");
+const { popularContentHandler } = require("../handlers/generalHandler");
+
 const popularContentCtrl = async (req, res) => {
-  const { type } = req.params;
+  const { type, category } = req.params;
+  // type = movie | tv
+  // category = popular | top_rated | now_playing | upcoming | airing_today | on_the_air
+
   try {
-    const response = await popularContentHandler(type);
-    res.json(response.data);
+    const data = await popularContentHandler(type, category);
+    return res.status(200).json(data);
   } catch (error) {
-    res
-      .status(400)
-      .json({ error: "An error occurred while processing your request." });
-  }
-};
-const popularMovieCtrl = async (req, res) => {
-  try {
-    const response = await popularMovieHandler();
-    res.json(response.data);
-  } catch (error) {
-    res
-      .status(400)
-      .json({ error: "An error occurred while processing your request." });
-  }
-};
-const popularSeriesCtrl = async (req, res) => {
-  try {
-    const response = await popularSeriesHandler();
-    res.json(response.data);
-  } catch (error) {
-    res
-      .status(400)
-      .json({ error: "An error occurred while processing your request." });
+    console.error(
+      "Error en getListController:",
+      error.response?.data || error.message
+    );
+    return res.status(500).json({ error: "Error al obtener la lista" });
   }
 };
 module.exports = {
   popularContentCtrl,
-  popularMovieCtrl,
-  popularSeriesCtrl,
 };

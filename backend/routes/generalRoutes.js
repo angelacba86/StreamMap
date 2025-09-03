@@ -3,5 +3,5 @@ const router = Router();
 
 const { popularContentCtrl } = require("../controllers/generalCtrl");
 
-router.get("/popular/:type", popularContentCtrl);
+router.get("/:type/:category", popularContentCtrl);
 module.exports = router;
