@@ -13,7 +13,34 @@ const searchHandler = async (name) => {
       Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
     },
   });
-  return response;
+  const results = response.data.results
+  return {
+    movies: results
+      .filter((r) => r.media_type === "movie")
+      .map((m) => ({
+        id: m.id,
+        title: m.title,
+        poster: m.poster_path,
+        year: m.release_date?.split("-")[0],
+      })),
+
+    tv: results
+      .filter((r) => r.media_type === "tv")
+      .map((t) => ({
+        id: t.id,
+        name: t.name,
+        poster: t.poster_path,
+        year: t.first_air_date?.split("-")[0],
+      })),
+
+    people: results
+      .filter((r) => r.media_type === "person")
+      .map((p) => ({
+        id: p.id,
+        name: p.name,
+        profile: p.profile_path,
+      })),
+  };
 };
 
 const resultDetailsHandler = async (id, type) => {

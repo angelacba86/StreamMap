@@ -5,25 +5,23 @@ const {
   resultProvidersHandler,
 } = require("../handlers/searchHandler");
 
-
-
 const searchResultsCtrl = async (req, res) => {
   const query = req.query.query;
   console.log("Search query:", query);
-  if (!query) {
-    return res.status(400).json({ error: 'Query parameter "q" is required' });
+  if (!query || query.lenght < 2) {
+    return res.status(400).json({ error: "Query parameter is too short or is empty" });
   }
- 
+
   try {
     const response = await searchHandler(query);
-    res.json(response.data);
+     return res.status(200).json(response);
   } catch (error) {
     console.error("Error during search:", error);
     res
       .status(500)
       .json({ error: "An error occurred while processing your request." });
   }
-};
+}; 
 
 const resultDetailCtrl = async (req, res) => {
   const { id, type } = req.params;
@@ -48,7 +46,7 @@ const resultDetailCtrl = async (req, res) => {
 
 const resultProvidersCtrl = async (req, res) => {
   const { type, id } = req.params;
-  const { provider } = req.query; 
+  const { provider } = req.query;
   if (!type && !id) {
     return res
       .status(400)
@@ -68,5 +66,5 @@ const resultProvidersCtrl = async (req, res) => {
 module.exports = {
   searchResultsCtrl,
   resultDetailCtrl,
-  resultProvidersCtrl
+  resultProvidersCtrl,
 };
