@@ -35,7 +35,7 @@ const resultDetailCtrl = async (req, res) => {
   try {
     const response = await resultDetailsHandler(id, type);
     console.log("response ", response);
-    res.json(response.data);
+    res.json(response);
   } catch (error) {
     console.error("Error during search:", error);
     res
@@ -52,19 +52,52 @@ const resultProvidersCtrl = async (req, res) => {
       .status(400)
       .json({ error: 'parameters "id & type" are required' });
   }
+
   try {
-    const response = await resultProvidersHandler(type, id);
-    res.json(response.data);
+    // si provider existe, lo transformamos en array
+    const filterProviders = provider
+      ? provider.split(",").map((p) => p.trim())
+      : [];
+
+    const response = await resultProvidersHandler(type, id, filterProviders);
+
+    res.json(response);
   } catch (error) {
-    console.error("Error during search:", error);
-    res
-      .status(500)
-      .json({ error: "An error occurred while processing your request." });
+    console.error("Error during provider search:", error);
+    res.status(500).json({
+      error: "An error occurred while processing your request.",
+    });
   }
 };
 
+const resultFullCtrl = async (req, res) => {
+  const { type, id } = req.params;
+  const { provider } = req.query;
+
+  if (!type || !id) {
+    return res.status(400).json({ error: 'parameters "id" & "type" are required' });
+  }
+
+  try {
+    const details = await resultDetailsHandler(id, type);
+
+    const filterProviders = provider
+      ? provider.split(",").map((p) => p.trim())
+      : [];
+    const providers = await resultProvidersHandler(type, id, filterProviders);
+
+    res.json({
+      ...details,
+      providers,
+    });
+  } catch (error) {
+    console.error("Error fetching full details:", error);
+    res.status(500).json({ error: "An error occurred while processing your request." });
+  }
+};
 module.exports = {
   searchResultsCtrl,
   resultDetailCtrl,
   resultProvidersCtrl,
+  resultFullCtrl
 };
