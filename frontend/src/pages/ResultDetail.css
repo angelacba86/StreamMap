@@ -85,6 +85,8 @@
 }
 .countries .countries-head {
   width: 100%;
+  display:flex;
+  justify-content: space-between;
 }
 .countries .countries-body {
   display: flex;

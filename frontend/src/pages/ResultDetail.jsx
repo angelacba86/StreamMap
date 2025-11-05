@@ -144,6 +144,9 @@ const ResultDetail = () => {
             <div className="countries">
               <div className="countries-head">
                 <h2>Países Disponibles</h2>
+                <select className="streaming">
+                  <option value="">--Elige su Opcion--</option>
+                </select>
               </div>
               <div className="countries-body">
                 {displayedCountries.map((prov) => (
@@ -159,7 +162,6 @@ const ResultDetail = () => {
                   </button>
                 ))}
               </div>
-
               {/* Botón Ver más / Ver menos */}
               {detail.providers.length > LIMIT && (
                 <button
