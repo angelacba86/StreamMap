@@ -1,0 +1,66 @@
+.detail-container {
+  display: flex;
+  width: 100%;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+}
+.detail-content div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.detail-content .titles h2,
+.detail-content .titles h3 {
+  display: inline-flex;
+  margin: 0;
+  align-items: baseline;
+}
+.titles h2 {
+  font-size: 2rem;
+}
+.titles h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+.detail-content .subtitles {
+  padding-bottom: 1rem;
+}
+.detail-content .subtitles .genre {
+  display: inline-flex;
+  gap: 12px;
+  padding: 0.3rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  /* color: var(--color-bg); */
+  font-weight: 600;
+}
+.save-buttons button {
+  display: flex;
+  background: var(--gradient-primary);
+  color: var(--color-text);
+  border-radius: 50%;
+  font-size: 1rem;
+  height: 40px;
+  width: 40px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.save-buttons button:hover {
+  background: var(--gradient-primary-180);
+}
+.detail-content .countries {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.countries .countries-head {
+  width: 100%;
+}
+.countries .countries-body {
+  display: flex;
+  flex-wrap: wrap;
+}

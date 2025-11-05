@@ -1,0 +1,132 @@
+.detail {
+  display: flex;
+  width: 100%;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+}
+.detail .poster-content {
+  width: 30%;
+  height: auto;
+}
+.poster-content img {
+  width: 95%;
+  border-radius: 12px;
+}
+.detail .detail-content {
+  width: 70%;
+}
+.detail-content div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.detail-content .titles h2,
+.detail-content .titles h3 {
+  display: inline-flex;
+  margin: 0;
+  align-items: baseline;
+}
+.titles h2 {
+  font-size: 2rem;
+}
+.titles h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+.titles small {
+  color: var(--color-text);
+  background-color: var(--desactivate);
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+.titles .returning {
+  background-color: var(--open);
+}
+.titles .ended {
+  background-color: var(--finish);
+}
+.titles .canceled {
+  background-color: var(--cancel);
+}
+.detail-content .subtitles {
+  padding-bottom: 1rem;
+}
+.detail-content .subtitles .genre {
+  display: inline-flex;
+  gap: 12px;
+  padding: 0.3rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  /* color: var(--color-bg); */
+  font-weight: 600;
+}
+.save-buttons button {
+  display: flex;
+  background: var(--gradient-primary);
+  color: var(--color-text);
+  border-radius: 50%;
+  font-size: 1rem;
+  height: 40px;
+  width: 40px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.save-buttons button:hover {
+  background: var(--gradient-primary-180);
+}
+.detail-content .countries {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.countries .countries-head {
+  width: 100%;
+}
+.countries .countries-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* //// */
+
+.flag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.flag-btn:hover {
+  background: #f0f0f0;
+}
+
+.show-more-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--gradient-primary);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.show-more-btn:hover {
+  background: var(--gradient-primary-180);
+}
+.small-icon {
+  text-align: left;
+}
+.small-icon svg {
+  margin-right: 0;
+}

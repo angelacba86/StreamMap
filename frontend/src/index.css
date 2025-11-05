@@ -2,6 +2,7 @@
   /* Colores base */
   --color-bg: #1f1d2b;
   --color-bg-secondary: #3c3952;
+  --color-bg-3:#14121f;
   --color-text: #fff;
   --color-primary: #3081edcc;
   --color-secondary: #6b7280;
@@ -9,6 +10,7 @@
 
   /* Degradado principal */
   --gradient-primary: linear-gradient(135deg, #9b51e0 0%, #3081edcc 80%);
+  --gradient-primary-180: linear-gradient(45deg, #9b51e0 0%, #3081edcc 80%);
   --gradient-bg: linear-gradient(180deg, #08070d 0%, #1f1d2b 80%);
 
   /* Tipografía */
@@ -19,6 +21,11 @@
   /* Layout */
   --container-width: 1200px;
   --padding-base: 1rem;
+  /*Status*/
+  --open: #32ce06;
+  --cancel: #e05151;
+  --finish: #09e2ff;
+  --desactivate: #a8a8aa;
 }
 
 html,

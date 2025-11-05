@@ -1,0 +1,77 @@
+/* src/components/ContentCard.css */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.content-card {
+  background-color: var(--color-bg-3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.content-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.5);
+}
+
+.content-poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.content-info {
+  padding: 0.6rem;
+  color: #fff;
+}
+
+.content-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0.3rem 0;
+}
+
+.content-year {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.no-content {
+  text-align: center;
+  color: #ccc;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .content-poster {
+    height: 240px;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-poster {
+    height: 200px;
+  }
+
+  .content-title {
+    font-size: 0.85rem;
+  }
+}

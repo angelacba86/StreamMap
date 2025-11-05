@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Result, ResultDetail } from "./pages";
+import { Home, Result, ResultDetail, MoviesTV } from "./pages";
 import App from "./App";
 
 function AppRoutes() {
@@ -8,7 +8,8 @@ function AppRoutes() {
       <Route element={<App />}>
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/result/:detail" element={<ResultDetail />} />
+        <Route path="/result/:type/:id" element={<ResultDetail />} />
+        <Route path="/:type/:category" element={<MoviesTV/>} />
       </Route>
     </Routes>
   );
