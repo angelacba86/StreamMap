@@ -14,7 +14,7 @@ export const ProvidersContent = ({ country }) => {
       {/* Tipos de proveedores */}
       {Object.entries(providerTypes).map(([key, label]) => {
         const list = country.providers[key];
-        if (!list || list.length === 0) return null; // 👈 no renderizar si está vacío
+        if (!list || list.length === 0) return null; // no renderizar si está vacío
         return (
           <div key={key} className="provider-section">
             <h4>{label}</h4>
