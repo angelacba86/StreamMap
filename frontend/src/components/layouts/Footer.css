@@ -17,3 +17,18 @@
   width: 100%;
   text-align: center;
 }
+/* ========== RESPONSIVE - MOBILE ========== */
+@media(max-width:600px){
+  .links{
+    flex-direction: column;
+    align-content: center;
+  }
+  .links .social-media{
+    padding-right: 0;
+    justify-content: center
+  }
+  .enlaces-footer ul{
+    justify-content: center; 
+    padding:0;
+  }
+}

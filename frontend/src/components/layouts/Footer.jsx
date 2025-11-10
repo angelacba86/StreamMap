@@ -10,7 +10,7 @@ export const Footer = () => {
     <footer>
       <div className="inner footer-container">
         <div className="links">
-          <nav>
+          <nav className="enlaces-footer">
             <ul>
               <a href="#">
                 <li>Sobre Nosotros</li>
