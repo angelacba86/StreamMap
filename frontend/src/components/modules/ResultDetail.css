@@ -91,6 +91,8 @@
 .countries .countries-body {
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
+  align-content: center;
 }
 
 /* //// */
@@ -98,8 +100,10 @@
 .flag-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.3rem;
-  padding: 0.4rem 0.6rem;
+  width:60px;
+  height: 30px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background: white;
