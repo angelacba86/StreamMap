@@ -135,6 +135,7 @@ export const countries = {
   CZ: "República Checa",
   CF: "República Centroafricana",
   CD: "República Democrática del Congo",
+  CI: "Costa de Marfil",
   RO: "Rumanía",
   RU: "Rusia",
   RW: "Ruanda",
