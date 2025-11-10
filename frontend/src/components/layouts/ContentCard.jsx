@@ -6,12 +6,15 @@ export const ContentCard = ({ content = [], type }) => {
   if (!content.length) {
     return <p className="no-content">No hay contenido disponible.</p>;
   }
-
+  const normalizeContent = content.map((cont) => ({
+    ...cont,
+    type: type || cont.type || "default",
+  }));
   return (
     <div className="content-grid">
-      {content.map((cont, index) => (
+      {normalizeContent.map((cont, index) => (
         <div key={index} className="content-card">
-          <Link to={`/result/${type}/${cont.id}`}>
+          <Link to={`/result/${cont.type}/${cont.id}`}>
             <img
               className="content-poster"
               src={
