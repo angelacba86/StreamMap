@@ -6,6 +6,7 @@
 }
 .cards-content .card {
   width: 25%;
+  min-width: 250px;
   background-color: var(--color-bg-secondary);
   border-radius: 8px;
   padding: 1rem;
@@ -40,4 +41,10 @@
 .card .icon {
   color: var(--color-bg-secondary);
   font-size: 1.9rem;
+}
+@media (max-width: 1390px) {
+  .cards-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

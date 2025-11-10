@@ -14,7 +14,7 @@ export const StepsCards = () => {
 
         <h2>Busca tu película o serie</h2>
         <p>
-          🔍 Escribe el título en nuestro buscador En segundos, StreamMap
+          🔍 Escribe el título en nuestro buscador. En segundos, StreamMap
           encuentra el contenido que quieras, sin importar la región.
         </p>
       </div>
@@ -24,7 +24,7 @@ export const StepsCards = () => {
         </div>
         <h2>Explora disponibilidad global</h2>
         <p>
-          🌍 Mira en qué países y servicios de streaming está disponible
+          🌍 Mira en qué países y servicios de streaming está disponible.
           Olvídate de catálogos limitados: tendrás el mapa completo, región por
           región.
         </p>
@@ -35,7 +35,7 @@ export const StepsCards = () => {
         </div>
         <h2>Elige tu servicio y región</h2>
         <p>
-          📺 Selecciona la mejor opción para ti Ya sea Netflix en EE.UU., Prime
+          📺 Selecciona la mejor opción para ti. Ya sea Netflix en EE.UU., Prime
           Video en España o Disney+ en Canadá, tú decides dónde verlo.
         </p>
       </div>
