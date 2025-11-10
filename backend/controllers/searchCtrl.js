@@ -8,7 +8,7 @@ const {
 const searchResultsCtrl = async (req, res) => {
   const query = req.query.query;
   console.log("Search query:", query);
-  if (!query || query.lenght < 2) {
+   if (!query || query.length < 2) {
     return res.status(400).json({ error: "Query parameter is too short or is empty" });
   }
 
