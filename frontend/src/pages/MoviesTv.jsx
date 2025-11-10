@@ -7,7 +7,7 @@ import { ContentCard } from "../components";
 function MoviesTv() {
   const { type, category } = useParams();
   const [content, setContent] = useState([]);
-
+  const onTitle= type == "movie" ? "Películas" : "Series"
   useEffect(() => {
     if (!type || !category) return;
 
@@ -15,7 +15,7 @@ function MoviesTv() {
       try {
         const url = `http://localhost:5000/${type}/${category}`;
         const response = await axios.get(url);
-        console.log("📦 Datos recibidos:", response.data);
+        console.log("Datos recibidos:", response.data);
         setContent(response.data || []); // ya no esperamos results
       } catch (error) {
         console.log("Error al cargar películas/series", error.message);
@@ -28,7 +28,7 @@ function MoviesTv() {
   return (
     <div>
       <h2 className="section-title">
-        {category === "popular" ? "Populares" : category}
+        {category === "top_rated" ? `${onTitle} mejor calificadas` : category}
       </h2>
       <ContentCard content={content} type={type} />
     </div>
