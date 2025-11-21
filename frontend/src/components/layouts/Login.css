@@ -1,0 +1,44 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.checkbox input {
+  margin-inline: 5px;
+  width: auto;
+  background-color: var(--color-selected);
+}
+.checkbox label {
+  font-size: small;
+}
+.button-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+.login small {
+  text-align: center;
+}
+.login a {
+  cursor: pointer;
+}
+.login hr {
+  width: 100%;
+  border-width: 0;
+  height: 1px;
+  background-color: var(--color-secondary);
+}
+.link-btn{
+  background-color: transparent;
+  border: none;
+  color:var(--color-selected)
+}
+.link-btn:hover{
+  color:var(--color-text)
+}
