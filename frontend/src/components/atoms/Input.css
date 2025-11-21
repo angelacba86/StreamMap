@@ -1,0 +1,16 @@
+.input-style {
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  height: 2rem;
+  padding: 0 10px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: 0.3s;
+  margin: 10px 0;
+}
+.input-style:focus {
+  border: 2px solid var(--color-selected-border);
+  outline: none;
+}
