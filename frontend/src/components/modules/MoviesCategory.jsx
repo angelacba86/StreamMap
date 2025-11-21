@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export const MoviesCategory = ({ type, category, title }) => {
+  const API_URL = import.meta.env.VITE_API_URL;
   // const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8];
   const containerRef = useRef(null);
   const [movies, setMovies] = useState([]);
@@ -12,7 +13,7 @@ export const MoviesCategory = ({ type, category, title }) => {
     const fetchMovies = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/${type}/${category}`
+          `${API_URL}/${type}/${category}`
         );
         setMovies(response.data);
       } catch (error) {

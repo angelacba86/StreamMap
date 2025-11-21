@@ -5,6 +5,7 @@ import { DetailMovie, Modal, ProvidersContent } from "../components/index";
 import { getCountryName } from  "../utils/countries"
 
 const ResultDetail = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const { type, id } = useParams();
   const [detail, setDetail] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,7 @@ const ResultDetail = () => {
     const fetchDetail = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/search/${type}/${id}/full`
+          `${API_URL}/search/${type}/${id}/full`
         );
         setDetail(response.data);
       } catch (error) {

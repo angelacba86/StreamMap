@@ -5,15 +5,16 @@ import axios from "axios";
 import { ContentCard } from "../components";
 
 function MoviesTv() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const { type, category } = useParams();
   const [content, setContent] = useState([]);
-  const onTitle= type == "movie" ? "Películas" : "Series"
+  const onTitle = type == "movie" ? "Películas" : "Series";
   useEffect(() => {
     if (!type || !category) return;
 
     const fetchContent = async () => {
       try {
-        const url = `http://localhost:5000/${type}/${category}`;
+        const url = `${API_URL}/${type}/${category}`;
         const response = await axios.get(url);
         console.log("Datos recibidos:", response.data);
         setContent(response.data || []); // ya no esperamos results

@@ -5,6 +5,7 @@ import { ContentCard } from "../components";
 
 
 function Result() {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [searchParams] = useSearchParams();
   const query = searchParams.get("query");
   const [results, setResults] = useState([]);
@@ -22,7 +23,7 @@ function Result() {
       setError(null);
       try {
         const response = await axios.get(
-          `http://localhost:5000/search?query=${encodeURIComponent(query)}`
+          `${API_URL}/search?query=${encodeURIComponent(query)}`
         );
         
         // Traer del backend {movies: [], tv: [], people: []}
