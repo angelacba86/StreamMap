@@ -28,11 +28,13 @@ export const SignUp = ({ openLogin }) => {
           id="password2"
         />
         <div className="button-content">
-          <UiButton>Enviar</UiButton>
+          <UiButton variant="primary" size="medium" disabled>
+            Enviar
+          </UiButton>
         </div>
         <hr />
         <small>
-          ¿Ya tienes una cuenta?{" "}
+          ¿Ya tienes una cuenta?
           <button type="button" className="link-btn" onClick={openLogin}>
             Ingresa aqui
           </button>

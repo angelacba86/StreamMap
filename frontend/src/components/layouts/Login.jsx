@@ -1,6 +1,6 @@
 import "./Login.css";
 import { Input, UiButton } from "../index";
-export const Login = ({openSignUp}) => {
+export const Login = ({ openSignUp }) => {
   return (
     <>
       <form action="login" className="login">
@@ -17,14 +17,22 @@ export const Login = ({openSignUp}) => {
           <label htmlFor="savePassword">Recordarme</label>
         </div>
         <div className="button-content">
-          <UiButton variant="primary" size="medium" style={{ width: "200px" }}>
+          <UiButton
+            variant="primary"
+            size="medium"
+            style={{ width: "200px" }}
+            disabled
+          >
             Enviar
           </UiButton>
         </div>
 
         <hr />
         <small>
-          ¿No estás inscrito? <button type="button" className="link-btn" onClick={openSignUp}> Inscribete aqui </button>
+          ¿No estás inscrito?{" "}
+          <button type="button" className="link-btn" onClick={openSignUp}>
+            Inscribete aqui
+          </button>
         </small>
       </form>
     </>
