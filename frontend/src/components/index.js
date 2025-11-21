@@ -8,6 +8,10 @@ import { Modal } from "./atoms/Modal";
 import { ProvidersContent } from "./modules/ProviderContent";
 import { ContentCard } from "./layouts/ContentCard";
 import { DetailMovie } from "./modules/DetailMovie";
+import { Input } from "./atoms/Input";
+import { UiButton } from "./atoms/UiButton";
+import { SignUp } from "./layouts/SignUp";
+import { Login } from "./layouts/Login";
 
 export {
   Banner,
@@ -20,4 +24,8 @@ export {
   ProvidersContent,
   ContentCard,
   DetailMovie,
+  Input,
+  UiButton,
+  SignUp,
+  Login,
 };
