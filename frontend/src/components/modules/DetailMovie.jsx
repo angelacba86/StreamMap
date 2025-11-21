@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa6";
 import "flag-icons/css/flag-icons.min.css";
 import "./DetailMovie.css";
+import { UiButton } from "../atoms/UiButton";
 
 export const DetailMovie = ({
   detail,
@@ -97,12 +98,8 @@ export const DetailMovie = ({
         </div>
 
         <div className="save-buttons">
-          <button>
-            <FaHeart />
-          </button>
-          <button>
-            <FaBookmark />
-          </button>
+          <UiButton variant="icon" icon={<FaHeart />} />
+          <UiButton variant="icon" icon={<FaBookmark />} />
         </div>
 
         <div className="description">
@@ -138,9 +135,7 @@ export const DetailMovie = ({
                     onClick={() => onOpenModal(prov)}
                   >
                     <small>
-                      <span
-                        className={`fi fi-${prov.country.toLowerCase()}`}
-                      />{" "}
+                      <span className={`fi fi-${prov.country.toLowerCase()}`} />{" "}
                       {prov.country}
                     </small>
                   </button>
@@ -153,16 +148,16 @@ export const DetailMovie = ({
             </div>
             {/* Botón Ver más / Ver menos */}
             {filteredProviders.length > LIMIT && (
-              <button className="show-more-btn" onClick={onToggleCountries}>
+              <UiButton variant="primary" onClick={onToggleCountries}>
                 {showAllCountries
                   ? "Ver menos"
                   : `Ver más (${filteredProviders.length - LIMIT} más)`}
-              </button>
+              </UiButton>
             )}
             {selectedProvider && filteredProviders.length > 0 && (
               <p style={{ marginTop: "10px", fontSize: "14px", color: "#666" }}>
-                Mostrando {filteredProviders.length} de {detail.providers.length}{" "}
-                países con {selectedProvider}
+                Mostrando {filteredProviders.length} de{" "}
+                {detail.providers.length} países con {selectedProvider}
               </p>
             )}
           </div>

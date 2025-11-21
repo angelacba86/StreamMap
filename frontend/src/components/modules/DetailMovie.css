@@ -93,6 +93,7 @@
 .save-buttons button {
   display: flex;
   background: var(--gradient-primary);
+  box-shadow: #444;
   color: var(--color-text);
   border-radius: 50%;
   font-size: 1rem;
