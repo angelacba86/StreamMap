@@ -20,7 +20,6 @@ export const Login = ({ openSignUp }) => {
           <UiButton
             variant="primary"
             size="medium"
-            disabled
             style={{ width: "200px" }}
           >
             Enviar

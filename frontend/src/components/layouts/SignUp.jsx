@@ -28,7 +28,7 @@ export const SignUp = ({ openLogin }) => {
           id="password2"
         />
         <div className="button-content">
-          <UiButton variant="primary" size="medium" disabled>
+          <UiButton variant="primary" size="medium" >
             Enviar
           </UiButton>
         </div>
