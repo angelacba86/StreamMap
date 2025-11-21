@@ -1,0 +1,95 @@
+/* Base */
+.ui-btn {
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+}
+/* Sombra general para todos los botones */
+.ui-btn {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.18);
+}
+.ui-btn.ui-btn-active {
+  box-shadow: 0px 6px 18px rgba(255, 47, 106, 0.45);
+}
+/* Un poco más de sombra al hacer hover */
+.ui-btn:hover {
+  box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.22);
+}
+/* Animación de click */
+.ui-btn:active {
+  transform: scale(0.92);
+}
+
+/* -------- Variantes -------- */
+
+/* 1. Botón con ícono redondo */
+.ui-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.ui-btn-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* Estilo del botón icon */
+.ui-btn.ui-btn-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: var(--color-text);
+  box-shadow: 0 2px 6px #0003;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ui-btn.ui-btn-icon:hover {
+  transform: scale(1.08);
+  background: var(--gradient-primary-180);
+}
+.ui-btn.ui-btn-icon {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.ui-btn.ui-btn-icon:hover {
+  box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.28);
+}
+/* Activo (favorito / guardado encendido) */
+.ui-btn.ui-btn-icon.ui-btn-active {
+  background: linear-gradient(135deg, #ff2f6a, #ff7cb0);
+  color: white;
+  box-shadow: 0 0 10px #ff2f6a88;
+}
+
+.ui-btn.ui-btn-icon.ui-btn-active:hover {
+  background: linear-gradient(135deg, #ff4b7a, #ff91c0);
+}
+
+/* 2. Botón primary (como Ver más / Ver menos) */
+.ui-btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.ui-btn-primary:hover {
+  background: var(--gradient-primary-180);
+  transform: scale(1.03);
+  border-radius: 8px;
+  transform-origin: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.22);
+}
+/* Texto dentro de primaire */
+.ui-btn-text {
+  pointer-events: none;
+}
