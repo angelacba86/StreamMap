@@ -93,3 +93,10 @@
 .ui-btn-text {
   pointer-events: none;
 }
+.ui-btn:disabled,
+.ui-btn.ui-btn-disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  transform: none !important;
+}

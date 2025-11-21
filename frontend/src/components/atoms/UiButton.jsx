@@ -10,6 +10,7 @@ export const UiButton = ({
   className = "",
   title,
   style = {},
+  disabled = false, //
 }) => {
   return (
     <button
@@ -19,6 +20,7 @@ export const UiButton = ({
       onClick={onClick}
       title={title}
       style={style}
+       disabled={disabled} 
     >
       {icon && <span className="ui-btn-icon">{icon}</span>}
       {children && <span className="ui-btn-text">{children}</span>}
