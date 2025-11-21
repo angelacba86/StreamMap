@@ -8,7 +8,6 @@ export const MoviesCategory = ({ type, category, title }) => {
   // const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8];
   const containerRef = useRef(null);
   const [movies, setMovies] = useState([]);
-console.log("Componente MoviesTv montado")
   useEffect(() => {
     const fetchMovies = async () => {
       try {
@@ -39,8 +38,8 @@ console.log("Componente MoviesTv montado")
         </button>
         <div className="movies-subcontainer" ref={containerRef}>
           {movies.map((movie, index) => (
-            <Link to={`/result/${type}/${movie.id}`}>
-              <div className="movie" key={movie.id}>
+            <Link to={`/result/${type}/${movie.id}`} key={movie.id}>
+              <div className="movie">
                 <img
                   src={
                     movie.poster
