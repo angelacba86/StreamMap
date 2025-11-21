@@ -73,6 +73,7 @@ export const countries = {
   GW: "Guinea-Bisáu",
   GY: "Guyana",
   HT: "Haití",
+  HK:"Hong Kong",
   HN: "Honduras",
   HU: "Hungría",
   IN: "India",
@@ -169,6 +170,7 @@ export const countries = {
   TM: "Turkmenistán",
   TR: "Turquía",
   TV: "Tuvalu",
+  TW: "Taiwan",
   UA: "Ucrania",
   UG: "Uganda",
   UY: "Uruguay",
@@ -180,5 +182,4 @@ export const countries = {
   ZW: "Zimbabue",
 };
 
-export const getCountryName = (code) =>
-  countries[code?.toUpperCase()] || code;
+export const getCountryName = (code) => countries[code?.toUpperCase()] || code;
