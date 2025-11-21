@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import "./SearchingInput.css";
 import { IoSearch } from "react-icons/io5";
 
+
 export const SearchingInput = () => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
+
 
   const handleSearch = (e) => {
     e.preventDefault();
